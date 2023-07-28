@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('C');
 const mysql = require('mysql');
 
+
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -40,6 +41,7 @@ app.post('/', (req, res) => {
         res.redirect('/register');
     });
 });
+
 
 app.get('/register', (req, res) => {
     const sql = "SELECT * FROM student_info;";
